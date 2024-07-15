@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section th:replace="base::navbar"></section>
+<section>
+    <div class="container p-2">
+        <p class="text-center fs-3 mt-4">Admin Dashboard</p>
+        <div class="row p-5">
+            <!--add product new product to list-->
+            <div class="col-md-4">
+                <a href="/admin/add_product" class="text-decoration-none">
+                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body text-center text-warning">
+                        <i class="fa-solid fa-square-plus text-warning fa-3x"></i>
+                        <h4>Add Product</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!--add categories of products-->
+            <div class="col-md-4">
+                <a href="/admin/category" class="text-decoration-none">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-body text-center text-purple">
+                            <i class="fa-solid fa-right-from-bracket fa-3x text-purple"></i>
+                            <h4>Add Category</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--view product details-->
+            <div class="col-md-4">
+                <a href="/admin/viewProducts" class="text-decoration-none">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-body text-center text-warning">
+                            <i class="fa-regular fa-rectangle-list fa-3x text-warning"></i>
+                            <h4>View Product</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--Orders monitoring-->
+            <div class="col-md-4 mt-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-body text-center text-success">
+                            <i class="fa-solid fa-box fa-3x text-success"></i>
+                            <h4>Orders</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+          <!--user monitoring-->
+            <div class="col-md-4 mt-2">
+                <a href="#" class="text-decoration-none">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-body text-center text-primary">
+                            <i class="fa-solid fa-users fa-3x text-primary"></i>
+                            <h4>Users</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--Add  multiple Admin to monitor the web site-->
+            <div class="col-md-4 mt-2 ">
+                <a href="#" class="text-decoration-none">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-body text-center text-danger">
+                            <i class="fa-solid fa-user-tie text-danger fa-3x"></i>
+                            <h4>Add Admin</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--footer-->
+<section th:insert="base::footer"></section>
+
+</body>
+</html>
